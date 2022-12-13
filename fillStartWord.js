@@ -1,6 +1,9 @@
 const { template } = require('@babel/core')
 
-function fillStartWord(startWord, word) {
-  //code here
+function fillStartWorld(startWord, word) {
+  if (word === null || word === undefined) return undefined
+  if (startWord === word.slice(0, startWord.length)) return word
+  return startWord + word
 }
-module.exports = fillStartWord
+
+module.exports = fillStartWorld
